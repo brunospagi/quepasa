@@ -3,11 +3,11 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <div class="column is-4 is-offset-4">
-        <h3 class="title has-text-grey">Welcome to QuePasa</h3>
-        <div class="notification is-warning">This project is under development and should not be considered secure.
+        <h3 class="title has-text-grey">Bem-Vindo ao QuePasa</h3>
+        <div class="notification is-warning">Este projeto está em desenvolvimento e não deve ser considerado seguro.
         </div>
         <div class="box">
-          <h4 class="subtitle has-text-grey">Create your admin user</h4>
+          <h4 class="subtitle has-text-grey">Criar Usuario Admin</h4>
           {{ if .ErrorMessage }}
           <div class="notification is-warning">
             {{ .ErrorMessage }}
@@ -20,18 +20,18 @@
                   {{ if .EmailError }}
                   is-danger
                   {{ end }}"
-                  name="email" type="email" placeholder="Your Email"
+                  name="email" type="email" placeholder="Seu Email"
                   value="{{ .Email }}"
                   autofocus="">
               </div>
               {{ if .UserExistsError }}
               <p class="help is-danger">
-                This email address is already taken. Please choose a new one.
+                Este endereço de e-mail já está em uso. Escolha um novo.
               </p>
               {{ end }}
               {{ if .EmailInvalidError }}
               <p class="help is-danger">
-                Your email address is not valid. Please double check!
+                Seu endereço de e-mail não é válido. Por favor Verifique!
               </p>
               {{ end }}
             </div>
@@ -43,7 +43,7 @@
                   is-danger
                   {{ end }}"
                   name="password" type="password"
-                  placeholder="Your Password">
+                  placeholder="Sua Senha">
               </div>
 
               {{ if .PasswordStrengthError }}
@@ -60,15 +60,15 @@
                   is-danger
                   {{ end }}"
                   name="passwordConfirm" type="password"
-                  placeholder="Confirm password">
+                  placeholder="Confirme Sua Senha">
               </div>
               {{ if .PasswordMatchError }}
               <p class="help is-danger">
-                The passwords do not match. Please double-check!
+               As senhas não combinam. Por favor Verifique!
               </p>
               {{ end }}
             </div>
-            <button class="button is-block is-info is-large is-fullwidth">Create Admin User</button>
+            <button class="button is-block is-info is-large is-fullwidth">Criar Usuario Admin</button>
           </form>
         </div>
       </div>
